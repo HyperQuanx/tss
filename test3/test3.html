@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인 드롭다운</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* 기본 스타일 */
+      body {
+        font-family: "Malgun Gothic", sans-serif;
+      }
+
+      .userButton {
+        position: relative;
+        display: inline-block;
+      }
+
+      /* 로그인 버튼 스타일 */
+      .login-btn {
+        background-color: #f1f1f1;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      /* 드롭다운 콘텐츠 스타일 */
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 250px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        z-index: 1;
+        border-radius: 10px;
+        top: 40px; /* 버튼 아래에 표시 */
+        left: 0;
+      }
+
+      /* 드롭다운 콘텐츠에 보더 박스 스타일 */
+      .dropdown-content a {
+        color: black;
+        padding: 10px;
+        text-decoration: none;
+        display: block;
+      }
+
+      /* hover 시 드롭다운 표시 */
+      .userButton:hover .dropdown-content {
+        display: block;
+      }
+
+      /* 버튼 안쪽 텍스트 스타일 */
+      .dropdown-content p {
+        margin: 10px 0;
+        font-size: 16px;
+      }
+
+      .dropdown-content button {
+        background-color: #000;
+        color: white;
+        padding: 10px;
+        width: 100%;
+        border: none;
+        cursor: pointer;
+      }
+
+      .dropdown-content button:hover {
+        background-color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="userButton">
+      <button class="login-btn">로그인</button>
+      <div class="dropdown-content">
+        <p>환영합니다! 로그인이 필요해요 <span>😍</span></p>
+        <button>마이룸 바로가기</button>
+        <a href="#">수강신청</a>
+        <a href="#">성적관리</a>
+        <a href="#">주문/배송 조회</a>
+        <a href="#">개인정보 수정</a>
+      </div>
+    </div>
+  </body>
+</html>

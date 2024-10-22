@@ -1,0 +1,87 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  margin: 0 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  padding: 15px 0;
+  display: inline-block;
+  position: relative;
+  transition: color 0.4s ease; /* 텍스트 색상 변경 애니메이션 */
+}
+
+.menu a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #008cd6;
+  transition: width 0.4s ease;
+}
+
+.menu a:hover::after {
+  width: 100%; /* 밑줄 확장 */
+}
+
+.menu a:hover {
+  color: #008cd6; /* 텍스트 색상 변경 */
+}
+
+.submenu {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  visibility: hidden; /* 처음에는 보이지 않음 */
+  opacity: 0; /* 처음에는 투명 */
+  transform: translateY(-20px); /* 서브메뉴가 살짝 위에 위치 */
+  transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s; /* 애니메이션 속도를 0.5초로 설정 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.submenu ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 10px 0;
+  margin: 0;
+}
+
+.submenu li {
+  margin: 0 20px;
+}
+
+.submenu a {
+  color: #007bff;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.menu:hover + .submenu,
+nav:hover .submenu {
+  visibility: visible; /* 서브메뉴 보임 */
+  opacity: 1; /* 불투명하게 변경 */
+  transform: translateY(0); /* 원래 위치로 내려옴 */
+}
