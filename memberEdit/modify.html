@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스마트 해법</title>
+
+    <!-- // link태그 -->
+    <link rel="stylesheet" href="/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="icon" href="/public/channels4_profile.jpg" type="image/png" />
+    <link rel="stylesheet" href="/styleGroup/member/modifyMember.css" />
+    <!-- link 태그 // -->
+  </head>
+  <body>
+    <div class="boxContainer">
+      <!-- // 맨 위 사진 영역 -->
+      <div class="upBarGroup">
+        <a
+          href="https://high.milkt.co.kr/EventNew/20231107_consulting/consulting.aspx"
+          target="_blank"
+          ><img
+            src="/public/upBar1.png"
+            style="background-color: #034183; height: 80px"
+        /></a>
+        <a
+          href="https://high.milkt.co.kr/MyStudy/FullService/frm_FullService_Home.aspx"
+          target="_blank"
+          style="background-color: #585bf4; height: 80px"
+          ><img src="/public/upBar2.png"
+        /></a>
+      </div>
+      <!-- 맨 위 사진 영역 // -->
+
+      <!-- // navbar 영역 -->
+      <div class="center">
+        <div class="navTop">
+          <div class="navTopContent">
+            <a href="https://www.chunjae.co.kr/#/main" target="_blank"
+              >천재교육</a
+            ><span>|</span>
+            <a href="https://www.milkt.co.kr/HME/sellpa" target="_blank"
+              >T셀파</a
+            >
+            <span>|</span>
+            <a href="https://mall.chunjae.co.kr/#/main/main" target="_blank"
+              >천재교육 쇼핑몰</a
+            >
+            <span>|</span>
+            <a href="https://www.genia.academy/" target="_blank"
+              >천재IT교육센터</a
+            >
+          </div>
+          <div class="navTopContent">
+            <span class="dDay"
+              >2025학년도 수능
+              <strong id="dDayCount">수능날짜가 동적으로 바뀜</strong></span
+            >
+            <span>|</span> <a href="#">협업기업</a><span>|</span>
+            <a
+              href="/inquiy/user/gotoInquiy.do
+            "
+              >고객센터</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="navMainBoundary"></div>
+      <div class="menuArea">
+        <div class="center">
+          <div>
+            <nav class="navbarContainer">
+              <div class="navbarMain">
+                <div>
+                  <img src="/public/logo.png" alt="logo" class="logoImg" />
+                </div>
+                <div style="width: 200px"></div>
+                <ul class="navbarGroup">
+                  <li>브랜드 소개</li>
+                  <li>강의 목록</li>
+                  <li>프로그래밍</li>
+                  <li>게시판</li>
+                  <li>선생님</li>
+                  <li>자료실</li>
+                </ul>
+                <div class="submenu">
+                  <ul>
+                    <li class="submenuContentGroup1">
+                      <a href="#">브랜드 소개</a><a href="#">오시는 길</a>
+                    </li>
+                    <li class="submenuContentGroup2">
+                      <a href="#">국어</a>
+                      <a href="#">수학</a>
+                      <a href="#">영어</a>
+                      <a href="#">한국사</a>
+                      <a href="#">사회</a>
+                      <a href="#">과학</a>
+                      <a href="#">제2외국어</a>
+                    </li>
+                    <li class="submenuContentGroup3">
+                      <a href="#">FrontEnd</a>
+                      <a href="#">BackEnd</a>
+                      <a href="#">Cloud</a>
+                    </li>
+                    <li class="submenuContentGroup4">
+                      <a
+                        href="/inquiy/user/gotoInquiy.do
+                          "
+                        >1대1 QnA 게시판</a
+                      >
+                      <a
+                        href="/post/user/gotoPostList.do
+                          "
+                        >자유게시판</a
+                      >
+                    </li>
+                    <li class="submenuContentGroup5">
+                      <a href="#">국어</a>
+                      <a href="#">수학</a>
+                      <a href="#">영어</a>
+                      <a href="#">한국사</a>
+                      <a href="#">사회</a>
+                      <a href="#">과학</a>
+                      <a href="#">제2외국어</a>
+                    </li>
+                    <li class="submenuContentGroup6">
+                      <!-- 근데 여기가 사이트 자료실인가 선생님 자료실인가? -->
+                      <a href="#">사이트 자료실</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="userButton">
+                  <button class="loginBtn">
+                    <img src="/public/loginBtn.png" alt="" />
+                  </button>
+                  <div class="dropdown-content">
+                    <button class="loginPopupButton">Login</button>
+                    <!-- 로그인하면 여기 유저 이름 들어올 예정 --><span
+                      id="changeLogin"
+                    ></span>
+                    <button
+                      onclick="// 나의 학습방 가는 컨트롤러 이건 jsp에 옮기고 jstl로 넣자"
+                    >
+                      나의 학습방
+                    </button>
+                    <a href="#">마이페이지</a>
+                    <a href="#">성적관리</a>
+                    <a href="#">결제내역</a>
+                    <a href="#">장바구니 목록</a>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="loginContainer"></div>
+      <div class="navMainBoundary"></div>
+      <!-- navbar 영역 // -->
+
+      <!-- // 메인 콘텐츠 영역 -->
+      <main class="ccenter">
+        <div class="mainContainer2">
+          <div class="modifyContent">
+            <div>
+              <div class="modifyMenu modifyMemInfo">
+                <h2>학습생 정보</h2>
+              </div>
+              <div class="modifyMenu modifyMemInfo">
+                <a href="/member/common/gotoModify.do" class="modifyPage"
+                  >개인정보 수정</a
+                >
+              </div>
+
+              <div class="modifyMenu modifyMemInfo">
+                <a href="/member/common/delete.do">탈퇴</a>
+              </div>
+              <div class="modifyMenu modifyMemInfo" style="height: auto">
+                <img src="/public/userProblemCenter.png" />
+              </div>
+              <div
+                class="modifyMenu modifyMemInfo"
+                style="height: 284px; border-bottom: none"
+              ></div>
+            </div>
+            <div class="modifyInputArea">
+              <form action="/member/common/modify.do" method="post">
+                <h2 class="ccenter">개인 정보 수정</h2>
+                <div>
+                  <label for="userId" class="inputLabel">아이디:</label>
+                  <input
+                    type="text"
+                    name="userId"
+                    id="userId"
+                    placeholder="아이디"
+                    class="inputField"
+                    required
+                    value=""
+                    disabled
+                  /><br />
+                </div>
+                <button class="idDuplicateCheck">아이디 중복 체크</button>
+
+                <div>
+                  <label for="userPwd" class="inputLabel">비밀번호:</label>
+                  <input
+                    type="password"
+                    name="userPwd"
+                    id="userPwd"
+                    placeholder="비밀번호"
+                    class="inputField"
+                    required
+                    oninput="validateUserPwd()"
+                  /><br />
+                </div>
+                <span class="valMsg2 valArea"></span>
+
+                <div>
+                  <label for="userPwdCheck" class="inputLabel"
+                    >비밀번호 확인:</label
+                  >
+                  <input
+                    type="password"
+                    name="userPwdCheck"
+                    id="userPwdCheck"
+                    placeholder="비밀번호"
+                    class="inputField"
+                    required
+                    oninput="validateUserPwdCheck()"
+                  /><br />
+                </div>
+                <span class="valMsg3 valArea"></span>
+
+                <div>
+                  <label for="userName" class="inputLabel">이름:</label>
+                  <input
+                    type="text"
+                    name="userName"
+                    id="userName"
+                    placeholder="이름"
+                    class="inputField"
+                    require
+                    value=""
+                    disabled
+                  /><br />
+                </div>
+                <span class="valMsg4 valArea"></span>
+
+                <div>
+                  <label for="userEmail" class="inputLabel">이메일:</label>
+                  <input
+                    type="email"
+                    name="userEmail"
+                    id="userEmail"
+                    placeholder="이메일"
+                    class="inputField"
+                    required
+                    oninput="validateUserEmail()"
+                  /><br />
+                </div>
+                <span class="valMsg5 valArea"></span>
+
+                <div>
+                  <label for="userPhone" class="inputLabel">전화번호:</label>
+                  <input
+                    type="tel"
+                    name="userPhone"
+                    id="userPhone"
+                    placeholder="전화번호"
+                    class="inputField"
+                    required
+                    oninput="validateUserPhone()"
+                  /><br />
+                </div>
+                <span class="valMsg6 valArea"></span>
+
+                <div>
+                  <label for="userBirth" class="inputLabel">생년월일:</label>
+                  <input
+                    type="date"
+                    name="userBirth"
+                    id="userBirth"
+                    placeholder="생년월일"
+                    class="inputField"
+                    required
+                    value=""
+                    disabled
+                  /><br />
+                </div>
+                <span class="valMsg7 valArea"></span>
+
+                <div>
+                  <label for="userNickname" class="inputLabel">닉네임:</label>
+                  <input
+                    type="text"
+                    name="userNickname"
+                    id="userNickname"
+                    placeholder="닉네임"
+                    class="inputField"
+                    required
+                    oninput="validateUserNickname()"
+                  /><br />
+                </div>
+                <span class="valMsg8 valArea"></span>
+
+                <div class="center">
+                  <button type="submit" class="submitButton">
+                    정보 수정하기
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="rightImageArea">
+              <img src="/public/noAreaImage1.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- 메인 콘텐츠 영역 // -->
+
+      <!-- // 푸터 영역 -->
+      <footer class="footerContainer">
+        <div class="footerContent">
+          <img src="/public/logo.png" alt="로고" id="footerLogo" />
+          <div>
+            <p class="footerLink">
+              <a href="#" style="padding-left: 0px">회사소개</a> |
+              <a href="#">이용약관</a> | <a href="#">개인정보처리방침</a> |
+              <a href="#">스마트해법수학 학습관</a>
+            </p>
+            <p>
+              (주)스마트 해법 대표자 : 한덕용, 조수진, 강경민 사업자등록번호 :
+              119-81-78787 부가통신사업 신고 번호 : 016590
+            </p>
+            <p>
+              통신판매신고서 : 제2016-서울금천-1306호 주소 : 서울 금천구
+              가산로9길 23 11층 (가산동) 대표번호 : 010-8904-4623
+            </p>
+            <p style="color: rgb(153, 153, 153)">
+              Copyright © CHUNJAETEXTBOOK Corp. All Rights Reserved
+            </p>
+          </div>
+          <img src="/public/footerRight.png" alt="가맹문의" />
+        </div>
+      </footer>
+    </div>
+    <!-- 푸터 영역 // -->
+
+    <script src="/script.js"></script>
+    <script src="/jsGroup/member/modifyMember.js"></script>
+  </body>
+</html>
