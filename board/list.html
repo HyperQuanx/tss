@@ -7,12 +7,12 @@
 
     <!-- // link태그 -->
     <link rel="stylesheet" href="/styles.css" />
-    <link rel="stylesheet" href="/stylegroup/member/registerStyle.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="icon" href="/public/channels4_profile.jpg" type="image/png" />
+    <link rel="stylesheet" href="/stylegroup/post/list.css" />
     <!-- link 태그 // -->
   </head>
   <body>
@@ -158,46 +158,103 @@
         </div>
       </div>
       <div class="loginContainer"></div>
+      <div class="navMainBoundary"></div>
       <!-- navbar 영역 // -->
 
       <!-- // 메인 콘텐츠 영역 -->
       <main>
-        <div class="register-main">
-          <div class="register-container">
-            <img src="/public/logo.png" alt="Logo" class="register-logo" />
-
-            <h1 class="register-title">회원가입</h1>
-            <p class="register-subtitle">가입 유형을 선택해주세요.</p>
-
-            <div class="register-user-type">
-              <div class="user-type-option student">
-                <img src="/public/student.png" alt="학생" class="user-image" />
-                <label class="radio-container" style="display: block">
-                  <input type="radio" name="userType" value="student" checked />
-                  <span class="checkmark"></span> 학생
-                </label>
-              </div>
-
-              <div class="user-type-option teacher">
-                <img
-                  src="/public/teacher.png"
-                  alt="선생님"
-                  class="user-image"
-                />
-                <label class="radio-container" style="display: block">
-                  <input type="radio" name="userType" value="teacher" />
-                  <span class="checkmark"></span> 선생님
-                </label>
+        <h1 class="textCenter boardBoxTitle">게시판 이름</h1>
+        <div class="areaDeployment"></div>
+        <div class="ccenter">
+          <div class="boardBoxMain">
+            <div class="boardContainerLeftSide">
+              <div class="boardMenuGroup">
+                <div class="boardMenu">
+                  <h3>게시판 모음</h3>
+                </div>
+                <div class="boardMenu">
+                  <p><a href="#">자유게시판</a></p>
+                </div>
+                <div class="boardMenu">
+                  <p><a href="#">공지사항</a></p>
+                </div>
+                <div class="boardMenu">
+                  <p><a href="#">자료실</a></p>
+                </div>
               </div>
             </div>
-
-            <button class="select-btn">가입 진행</button>
+            <div class="boardContainer">
+              <div class="boardFilter">
+                <form action="" method="post">
+                  <div class="boardTopBar">
+                    <div>
+                      <select id="searchOption">
+                        <option value="board_title">제목</option>
+                        <option value="board_writer">아이디</option>
+                        <option value="board_content">내용</option>
+                        <option value="board_title_content">제목 + 내용</option>
+                      </select>
+                      <input type="text" id="searchInput" placeholder="제목" />
+                      <button type="submit">검색</button>
+                    </div>
+                    <button onclick="goToWritePage()">글 추가</button>
+                  </div>
+                </form>
+              </div>
+              <table class="boardTable">
+                <thead>
+                  <tr>
+                    <th>학년도</th>
+                    <th>분류</th>
+                    <th>제목</th>
+                    <th>등록일</th>
+                    <th>작성자</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2024</td>
+                    <td><span class="label notice">공지사항</span></td>
+                    <td>
+                      <a href="">고교학점제 & 2028 대입 개편의 핵심 이슈는?</a>
+                    </td>
+                    <td>2024-10-21</td>
+                    <td>한덕용</td>
+                  </tr>
+                  <tr>
+                    <td>2024</td>
+                    <td><span class="label notice">공지사항</span></td>
+                    <td>
+                      <a href="/gotoPostDetail.do?idx=?"
+                        >2026학년도 주요 대학교과 전형의 특징은?</a
+                      >
+                    </td>
+                    <td>2024-10-11</td>
+                    <td>한덕용</td>
+                  </tr>
+                  <tr>
+                    <td>2024</td>
+                    <td><span class="label free">자유</span></td>
+                    <td><a href="/gotoPostDetail.do?idx=?">제목</a></td>
+                    <td>등록일</td>
+                    <td>작성자</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="pagination">
+                <!-- "[" + pageNum + "]" 형식으로 들어올 예정 -->
+                <button>[1]</button>
+                <button>[2]</button>
+                <button>[3]</button>
+              </div>
+            </div>
+            <div class="boardContainerrightSide">
+              <img src="/public/noAreaImage1.png" alt="" />
+            </div>
           </div>
         </div>
       </main>
-      <!-- 메인 콘텐츠 영역 // -->
 
-      <!-- // 푸터 영역 -->
       <footer class="footerContainer">
         <div class="footerContent">
           <img src="/public/logo.png" alt="로고" id="footerLogo" />
@@ -226,6 +283,6 @@
     <!-- 푸터 영역 // -->
 
     <script src="/script.js"></script>
-    <script src="/jsgroup/member/registerScript.js"></script>
+    <script src="/jsgroup/post/list.js"></script>
   </body>
 </html>

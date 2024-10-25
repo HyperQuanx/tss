@@ -308,6 +308,12 @@ a {
   align-items: center;
 }
 
+.caround {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
 .underSlideContent {
   display: flex;
 }
