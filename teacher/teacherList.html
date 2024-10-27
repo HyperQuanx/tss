@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스마트 해법</title>
+
+    <!-- // link태그 -->
+    <link rel="stylesheet" href="/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="icon" href="/public/channels4_profile.jpg" type="image/png" />
+    <link rel="stylesheet" href="/styleGroup/teacher/teacherList.css" />
+    <!-- link 태그 // -->
+  </head>
+  <body>
+    <div class="boxContainer">
+      <!-- // 맨 위 사진 영역 -->
+      <div class="upBarGroup">
+        <a
+          href="https://high.milkt.co.kr/EventNew/20231107_consulting/consulting.aspx"
+          target="_blank"
+          ><img
+            src="/public/upBar1.png"
+            style="background-color: #034183; height: 80px"
+        /></a>
+        <a
+          href="https://high.milkt.co.kr/MyStudy/FullService/frm_FullService_Home.aspx"
+          target="_blank"
+          style="background-color: #585bf4; height: 80px"
+          ><img src="/public/upBar2.png"
+        /></a>
+      </div>
+      <!-- 맨 위 사진 영역 // -->
+
+      <!-- // navbar 영역 -->
+      <div class="center">
+        <div class="navTop">
+          <div class="navTopContent">
+            <a href="https://www.chunjae.co.kr/#/main" target="_blank"
+              >천재교육</a
+            ><span>|</span>
+            <a href="https://www.milkt.co.kr/HME/sellpa" target="_blank"
+              >T셀파</a
+            >
+            <span>|</span>
+            <a href="https://mall.chunjae.co.kr/#/main/main" target="_blank"
+              >천재교육 쇼핑몰</a
+            >
+            <span>|</span>
+            <a href="https://www.genia.academy/" target="_blank"
+              >천재IT교육센터</a
+            >
+          </div>
+          <div class="navTopContent">
+            <span class="dDay"
+              >2025학년도 수능
+              <strong id="dDayCount">수능날짜가 동적으로 바뀜</strong></span
+            >
+            <span>|</span> <a href="#">협업기업</a><span>|</span>
+            <a
+              href="/inquiy/user/gotoInquiy.do
+            "
+              >고객센터</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="navMainBoundary"></div>
+      <div class="menuArea">
+        <div class="center">
+          <div>
+            <nav class="navbarContainer">
+              <div class="navbarMain">
+                <div>
+                  <img src="/public/logo.png" alt="logo" class="logoImg" />
+                </div>
+                <div style="width: 200px"></div>
+                <ul class="navbarGroup">
+                  <li>브랜드 소개</li>
+                  <li>강의 목록</li>
+                  <li>프로그래밍</li>
+                  <li>게시판</li>
+                  <li>선생님</li>
+                  <li>자료실</li>
+                </ul>
+                <div class="submenu">
+                  <ul>
+                    <li class="submenuContentGroup1">
+                      <a href="#">브랜드 소개</a><a href="#">오시는 길</a>
+                    </li>
+                    <li class="submenuContentGroup2">
+                      <a href="#">국어</a>
+                      <a href="#">수학</a>
+                      <a href="#">영어</a>
+                      <a href="#">한국사</a>
+                      <a href="#">사회</a>
+                      <a href="#">과학</a>
+                      <a href="#">제2외국어</a>
+                    </li>
+                    <li class="submenuContentGroup3">
+                      <a href="#">FrontEnd</a>
+                      <a href="#">BackEnd</a>
+                      <a href="#">Cloud</a>
+                    </li>
+                    <li class="submenuContentGroup4">
+                      <a
+                        href="/inquiy/user/gotoInquiy.do
+                          "
+                        >1대1 QnA 게시판</a
+                      >
+                      <a
+                        href="/post/user/gotoPostList.do
+                          "
+                        >자유게시판</a
+                      >
+                    </li>
+                    <li class="submenuContentGroup5">
+                      <a href="#">국어</a>
+                      <a href="#">수학</a>
+                      <a href="#">영어</a>
+                      <a href="#">한국사</a>
+                      <a href="#">사회</a>
+                      <a href="#">과학</a>
+                      <a href="#">제2외국어</a>
+                    </li>
+                    <li class="submenuContentGroup6">
+                      <!-- 근데 여기가 사이트 자료실인가 선생님 자료실인가? -->
+                      <a href="#">사이트 자료실</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="userButton">
+                  <button class="loginBtn">
+                    <img src="/public/loginBtn.png" alt="" />
+                  </button>
+                  <div class="dropdown-content">
+                    <button class="loginPopupButton">Login</button>
+                    <!-- 로그인하면 여기 유저 이름 들어올 예정 --><span
+                      id="changeLogin"
+                    ></span>
+                    <button
+                      onclick="// 나의 학습방 가는 컨트롤러 이건 jsp에 옮기고 jstl로 넣자"
+                    >
+                      나의 학습방
+                    </button>
+                    <a href="#">마이페이지</a>
+                    <a href="#">성적관리</a>
+                    <a href="#">결제내역</a>
+                    <a href="#">장바구니 목록</a>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="loginContainer"></div>
+      <div class="navMainBoundary"></div>
+      <!-- navbar 영역 // -->
+
+      <!-- // 메인 콘텐츠 영역 -->
+      <main>
+        <h1 class="textCenter" style="margin-bottom: 30px">선생님</h1>
+        <div class="ccenter">
+          <div class="mainBox">
+            <h3>과목별 선생님</h3>
+            <p class="lectureContainerInfo">
+              과목별로 선생님을 확인할 수 있습니다.
+            </p>
+            <div class="lectureContainer">
+              <div class="lectureMenuBar">
+                <div
+                  class="lectureMenuBarItem active"
+                  onclick="showContent(event, 'content1')"
+                >
+                  국어
+                </div>
+                <div
+                  class="lectureMenuBarItem"
+                  onclick="showContent(event, 'content2')"
+                >
+                  수학
+                </div>
+                <div
+                  class="lectureMenuBarItem"
+                  onclick="showContent(event, 'content3')"
+                >
+                  영어
+                </div>
+                <div
+                  class="lectureMenuBarItem"
+                  onclick="showContent(event, 'content4')"
+                >
+                  사탐
+                </div>
+                <div
+                  class="lectureMenuBarItem"
+                  onclick="showContent(event, 'content5')"
+                >
+                  과탐
+                </div>
+              </div>
+              <div>
+                <div id="content1" class="content active">
+                  <div class="teacherGroupArea">
+                    <a href="#">
+                      <div class="teacherCard">
+                        <img
+                          src="https://high.milkt.co.kr/UploadFile/LecturerImg/%EA%B5%AD%EC%96%B4_%EA%B6%8C%EC%88%9C%EA%B7%9C_1.png"
+                          alt="권순구 선생님"
+                          class="teacherImage"
+                        />
+                        <div class="cardContent">
+                          <h3>권순구 선생님</h3>
+                          <p>권순구의 정의</p>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="#">
+                      <div class="teacherCard">
+                        <img
+                          src="https://high.milkt.co.kr/UploadFile/LecturerImg/665_%EC%86%90%EC%9C%A0%EB%B9%88_A%ED%98%95_200x275.png"
+                          alt="김수정 선생님"
+                          class="teacherImage"
+                        />
+                        <div class="cardContent">
+                          <h3>손유빈 선생님</h3>
+                          <p>문학의 감상</p>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="#">
+                      <div class="teacherCard">
+                        <img
+                          src="https://high.milkt.co.kr/UploadFile/LecturerImg/2020-09-07.png"
+                          alt="엄은나 선생님"
+                          class="teacherImage"
+                        />
+                        <div class="cardContent">
+                          <h3>엄은나 선생님</h3>
+                          <p>문학의 감상</p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- 수학 -->
+                <div id="content2" class="content">
+                  <div class="teacherGroupArea">
+                    <a href="#">
+                      <div class="teacherCard">
+                        <img
+                          src="https://high.milkt.co.kr/UploadFile/LecturerImg/354_%EC%A0%84%EC%A4%80%ED%99%8D_Img13.png"
+                          alt="전준홍 선생님"
+                          class="teacherImage"
+                        />
+                        <div class="cardContent">
+                          <h3>전준홍 선생님</h3>
+                          <p>경우의 수 구하기</p>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="#">
+                      <div class="teacherCard">
+                        <img
+                          src="https://high.milkt.co.kr/UploadFile/LecturerImg/%EC%88%98%ED%95%99_%EB%B0%95%EC%A0%95%EC%9D%80_Img13.png"
+                          alt="박정은 선생님"
+                          class="teacherImage"
+                        />
+                        <div class="cardContent">
+                          <h3>박정은 선생님</h3>
+                          <p>함수의 극한</p>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="#">
+                      <div class="teacherCard">
+                        <img
+                          src="https://high.milkt.co.kr/UploadFile/LecturerImg/kanghyonh_Img13.png"
+                          alt="강력한 형제 선생님"
+                          class="teacherImage"
+                        />
+                        <div class="cardContent">
+                          <h3>강력한 형제 선생님</h3>
+                          <p>함수의 극한</p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- 영어 -->
+                <div id="content3" class="content">
+                  <div class="teacherGroupArea">
+                    <a href="#">
+                      <div class="teacherCard">
+                        <img
+                          src="https://high.milkt.co.kr/UploadFile/LecturerImg/356_%EA%B6%8C%EC%98%A4%EB%A5%9C_img13.jpg"
+                          alt="권오륜 선생님"
+                          class="teacherImage"
+                        />
+                        <div class="cardContent">
+                          <h3>권오륜 선생님</h3>
+                          <p>영어의 기초</p>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="#">
+                      <div class="teacherCard">
+                        <img
+                          src="https://high.milkt.co.kr/UploadFile/LecturerImg/%EA%B3%A0%EB%93%B1%EC%9B%B9_%EC%84%A0%EC%83%9D%EB%8B%98_%EC%98%81%EC%96%B4_%EA%B9%80%EC%97%B0%ED%95%98.jpg"
+                          alt="김연하 선생님"
+                          class="teacherImage"
+                        />
+                        <div class="cardContent">
+                          <h3>김연하 선생님</h3>
+                          <p>영어의 응용</p>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="#">
+                      <div class="teacherCard">
+                        <img
+                          src="https://high.milkt.co.kr/UploadFile/LecturerImg/336_%EC%9C%A4%EB%B9%88_Img13.jpg"
+                          alt="윤빈 선생님"
+                          class="teacherImage"
+                        />
+                        <div class="cardContent">
+                          <h3>윤빈 선생님</h3>
+                          <p>영어의 응용</p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- 사탐 -->
+                <div id="content4" class="content">
+                  <div class="teacherGroupArea">
+                    <a href="#">
+                      <div class="teacherCard">
+                        <img
+                          src="https://high.milkt.co.kr/UploadFile/LecturerImg/401_%EA%B9%80%EB%8F%84%ED%98%95_img13.png"
+                          alt="한소유 선생님"
+                          class="teacherImage"
+                        />
+                        <div class="cardContent">
+                          <h3>한소유 선생님</h3>
+                          <p>사회탐구의 기초</p>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="#">
+                      <div class="teacherCard">
+                        <img
+                          src="https://high.milkt.co.kr/UploadFile/LecturerImg/361_%EC%B0%A8%EB%AA%A9%EC%96%B8_Img13.png"
+                          alt="차목언 선생님"
+                          class="teacherImage"
+                        />
+                        <div class="cardContent">
+                          <h3>차목언 선생님</h3>
+                          <p>사회 문제 해결</p>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="#">
+                      <div class="teacherCard">
+                        <img
+                          src="https://high.milkt.co.kr/UploadFile/LecturerImg/%EC%82%AC%ED%9A%8C_%EB%AC%B8%EB%B3%91%EC%9D%BC.png"
+                          alt="문병일 선생님"
+                          class="teacherImage"
+                        />
+                        <div class="cardContent">
+                          <h3>문병일 선생님</h3>
+                          <p>사회 문제 해결</p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- 과탐 -->
+                <div id="content5" class="content">
+                  <div class="teacherGroupArea">
+                    <a href="#">
+                      <div class="teacherCard">
+                        <img
+                          src="https://high.milkt.co.kr/UploadFile/LecturerImg/%EA%B3%BC%ED%95%99%ED%83%90%EA%B5%AC_%ED%99%A9%EC%9C%A0%ED%99%94.jpg"
+                          alt="황유하 선생님"
+                          class="teacherImage"
+                        />
+                        <div class="cardContent">
+                          <h3>황유하 선생님</h3>
+                          <p>물리 탐구</p>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="#">
+                      <div class="teacherCard">
+                        <img
+                          src="https://high.milkt.co.kr/UploadFile/LecturerImg/%EC%84%A0%EC%83%9D%EB%8B%98%EB%A9%94%EC%9D%B8_%EA%B3%BC%ED%95%99-%EC%A0%95%EA%B5%AC%EB%A5%9C.png"
+                          alt="정구륜 선생님"
+                          class="teacherImage"
+                        />
+                        <div class="cardContent">
+                          <h3>정구륜 선생님</h3>
+                          <p>화학 기초</p>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="#">
+                      <div class="teacherCard">
+                        <img
+                          src="https://high.milkt.co.kr/UploadFile/LecturerImg/%EA%B3%BC%ED%95%99%ED%83%90%EA%B5%AC_%EB%A7%88%EC%A7%84%ED%98%B8.jpg"
+                          alt="마진호 선생님"
+                          class="teacherImage"
+                        />
+                        <div class="cardContent">
+                          <h3>마진호 선생님</h3>
+                          <p>화학 기초</p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- 메인 콘텐츠 영역 // -->
+
+      <!-- // 푸터 영역 -->
+      <footer class="footerContainer">
+        <div class="footerContent">
+          <img src="/public/logo.png" alt="로고" id="footerLogo" />
+          <div>
+            <p class="footerLink">
+              <a href="#" style="padding-left: 0px">회사소개</a> |
+              <a href="#">이용약관</a> | <a href="#">개인정보처리방침</a> |
+              <a href="#">스마트해법수학 학습관</a>
+            </p>
+            <p>
+              (주)스마트 해법 대표자 : 한덕용, 조수진, 강경민 사업자등록번호 :
+              119-81-78787 부가통신사업 신고 번호 : 016590
+            </p>
+            <p>
+              통신판매신고서 : 제2016-서울금천-1306호 주소 : 서울 금천구
+              가산로9길 23 11층 (가산동) 대표번호 : 010-8904-4623
+            </p>
+            <p style="color: rgb(153, 153, 153)">
+              Copyright © CHUNJAETEXTBOOK Corp. All Rights Reserved
+            </p>
+          </div>
+          <img src="/public/footerRight.png" alt="가맹문의" />
+        </div>
+      </footer>
+    </div>
+    <!-- 푸터 영역 // -->
+
+    <script src="/script.js"></script>
+    <script src="/jsGroup/teacher/teacherList.js"></script>
+  </body>
+</html>

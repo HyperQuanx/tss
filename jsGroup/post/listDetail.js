@@ -1,34 +1,56 @@
-const searchOption = document.getElementById("searchType");
-const searchInput = document.getElementById("searchKeyword");
-
-searchOption.addEventListener("change", function () {
-  const selectedOption = searchOption.value;
-
-  if (selectedOption === "title") {
-    searchInput.placeholder = "제목";
-  } else if (selectedOption === "writer") {
-    searchInput.placeholder = "아이디";
-  } else if (selectedOption === "title_content") {
-    searchInput.placeholder = "제목 + 내용";
+function toggleBottomBar() {
+  const bottomBar = document.getElementById("bottomBar");
+  if (bottomBar.style.display === "none" || bottomBar.style.display === "") {
+    bottomBar.style.display = "block";
+  } else {
+    bottomBar.style.display = "none";
   }
-});
-
-function goToWritePage() {
-  location.href = "/inquiry/common/gotoWrite.do";
 }
 
-// 나중에 현재 페이지 찾고 색 바꾸기
-const paginationButtons = document.querySelectorAll(".pagination button");
-
-paginationButtons.forEach((button) => {
-  // [1] 여기에 현재 페이지 들어가기
-  if (button.innerText === "[1]") {
-    button.classList.add("current-page");
+function confirmDelete() {
+  if (confirm("정말 삭제하시겠습니까?")) {
+    window.location.href = "/post/common/deletePost.do";
+  } else {
+    alert("삭제가 취소되었습니다.");
+    return false;
   }
-});
+}
+
+function updateCharCount() {
+  const textarea = document.getElementById("commentContent");
+  const charCountDisplay = document.getElementById("charCount");
+  const maxChars = 1000;
+
+  const currentLength = textarea.value.length;
+
+  if (currentLength > maxChars) {
+    charCountDisplay.classList.add("overLimit");
+  } else {
+    charCountDisplay.classList.remove("overLimit");
+  }
+
+  charCountDisplay.textContent = `${currentLength}/${maxChars}`;
+}
+
+function validateComment() {
+  const commentContent = document.getElementById("commentContent").value.trim();
+  const maxChars = 1000;
+
+  if (commentContent === "") {
+    alert("댓글 내용을 입력해 주세요.");
+    return false;
+  }
+
+  if (commentContent.length > maxChars) {
+    alert("댓글은 1000자 이하로 작성할 수 있습니다.");
+    return false;
+  }
+
+  return true;
+}
 
 // 동적으로 바뀌게 하기
-const titleElement = document.querySelector(".textCenter.boardBoxTitle");
+const titleElement = document.querySelector(".boardTitle");
 const boardType = titleElement.getAttribute("data-board-type");
 console.log("boardType:", boardType);
 document.addEventListener("DOMContentLoaded", () => {

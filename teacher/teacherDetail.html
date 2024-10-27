@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스마트 해법</title>
+
+    <!-- // link태그 -->
+    <link rel="stylesheet" href="/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="icon" href="/public/channels4_profile.jpg" type="image/png" />
+    <link rel="stylesheet" href="/styleGroup/teacher/teacherDetail.css" />
+    <!-- link 태그 // -->
+  </head>
+  <body>
+    <div class="boxContainer">
+      <!-- // 맨 위 사진 영역 -->
+      <div class="upBarGroup">
+        <a
+          href="https://high.milkt.co.kr/EventNew/20231107_consulting/consulting.aspx"
+          target="_blank"
+          ><img
+            src="/public/upBar1.png"
+            style="background-color: #034183; height: 80px"
+        /></a>
+        <a
+          href="https://high.milkt.co.kr/MyStudy/FullService/frm_FullService_Home.aspx"
+          target="_blank"
+          style="background-color: #585bf4; height: 80px"
+          ><img src="/public/upBar2.png"
+        /></a>
+      </div>
+      <!-- 맨 위 사진 영역 // -->
+
+      <!-- // navbar 영역 -->
+      <div class="center">
+        <div class="navTop">
+          <div class="navTopContent">
+            <a href="https://www.chunjae.co.kr/#/main" target="_blank"
+              >천재교육</a
+            ><span>|</span>
+            <a href="https://www.milkt.co.kr/HME/sellpa" target="_blank"
+              >T셀파</a
+            >
+            <span>|</span>
+            <a href="https://mall.chunjae.co.kr/#/main/main" target="_blank"
+              >천재교육 쇼핑몰</a
+            >
+            <span>|</span>
+            <a href="https://www.genia.academy/" target="_blank"
+              >천재IT교육센터</a
+            >
+          </div>
+          <div class="navTopContent">
+            <span class="dDay"
+              >2025학년도 수능
+              <strong id="dDayCount">수능날짜가 동적으로 바뀜</strong></span
+            >
+            <span>|</span> <a href="#">협업기업</a><span>|</span>
+            <a
+              href="/inquiy/user/gotoInquiy.do
+            "
+              >고객센터</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="navMainBoundary"></div>
+      <div class="menuArea">
+        <div class="center">
+          <div>
+            <nav class="navbarContainer">
+              <div class="navbarMain">
+                <div>
+                  <img src="/public/logo.png" alt="logo" class="logoImg" />
+                </div>
+                <div style="width: 200px"></div>
+                <ul class="navbarGroup">
+                  <li>브랜드 소개</li>
+                  <li>강의 목록</li>
+                  <li>프로그래밍</li>
+                  <li>게시판</li>
+                  <li>선생님</li>
+                  <li>자료실</li>
+                </ul>
+                <div class="submenu">
+                  <ul>
+                    <li class="submenuContentGroup1">
+                      <a href="#">브랜드 소개</a><a href="#">오시는 길</a>
+                    </li>
+                    <li class="submenuContentGroup2">
+                      <a href="#">국어</a>
+                      <a href="#">수학</a>
+                      <a href="#">영어</a>
+                      <a href="#">한국사</a>
+                      <a href="#">사회</a>
+                      <a href="#">과학</a>
+                      <a href="#">제2외국어</a>
+                    </li>
+                    <li class="submenuContentGroup3">
+                      <a href="#">FrontEnd</a>
+                      <a href="#">BackEnd</a>
+                      <a href="#">Cloud</a>
+                    </li>
+                    <li class="submenuContentGroup4">
+                      <a
+                        href="/inquiy/user/gotoInquiy.do
+                          "
+                        >1대1 QnA 게시판</a
+                      >
+                      <a
+                        href="/post/user/gotoPostList.do
+                          "
+                        >자유게시판</a
+                      >
+                    </li>
+                    <li class="submenuContentGroup5">
+                      <a href="#">국어</a>
+                      <a href="#">수학</a>
+                      <a href="#">영어</a>
+                      <a href="#">한국사</a>
+                      <a href="#">사회</a>
+                      <a href="#">과학</a>
+                      <a href="#">제2외국어</a>
+                    </li>
+                    <li class="submenuContentGroup6">
+                      <!-- 근데 여기가 사이트 자료실인가 선생님 자료실인가? -->
+                      <a href="#">사이트 자료실</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="userButton">
+                  <button class="loginBtn">
+                    <img src="/public/loginBtn.png" alt="" />
+                  </button>
+                  <div class="dropdown-content">
+                    <button class="loginPopupButton">Login</button>
+                    <!-- 로그인하면 여기 유저 이름 들어올 예정 --><span
+                      id="changeLogin"
+                    ></span>
+                    <button
+                      onclick="// 나의 학습방 가는 컨트롤러 이건 jsp에 옮기고 jstl로 넣자"
+                    >
+                      나의 학습방
+                    </button>
+                    <a href="#">마이페이지</a>
+                    <a href="#">성적관리</a>
+                    <a href="#">결제내역</a>
+                    <a href="#">장바구니 목록</a>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="loginContainer"></div>
+      <div class="navMainBoundary"></div>
+      <!-- navbar 영역 // -->
+
+      <!-- // 메인 콘텐츠 영역 -->
+      <main>
+        <div class="center">
+          <div class="teacherDetailImg">
+            <div class="center">
+              <img src="/public/teacher_kor/kor_kwon.jpg" alt="" />
+              <div class="teacherInfo">
+                <!-- 선생님 이름 동적으로 변경 -->
+                <div class="teacherName">권순구 선생님</div>
+                <p class="teacherProfile">약력</p>
+                <div>
+                  <p>
+                    고려대 국문과 졸업<br />
+                    고려대 교육심리학 석사<br />
+                    고려대 교육심리학 박사<br />
+                    現) 밀크T 중·고등 국어 강사<br />
+                    前) 방과후 학교 국어 및 논술 강사<br />
+                    (대진여고, 우정학사, 장수고, 상지여고, 계산여고,
+                    보은고,형석고, 신남중)<br />
+                    前) BC 코칭맘스쿨 국어 및 논술 학습법 강사
+                  </p>
+                </div>
+                <p class="teacherProfile">자격증</p>
+                중등학교 2급 정교사(국어)<br />
+                학습컨설턴트 1급
+
+                <p class="teacherProfile">출강학원</p>
+                국풍 2000 국어 중계점 고등 국어 강사
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="center" style="margin-top: 30px">
+          <div class="teacherDetailContainer"></div>
+        </div>
+        <img
+          src="https://high.milkt.co.kr/UploadFile/LecturerCurriculum/3fde8d39-182c-4fcd-9c51-102d2d818ce020230612022633.jpg"
+          alt=""
+          width="100%"
+        />
+
+        <div class="center">
+          <div class="teacherLectureList">
+            <div class="teacherDetailContainer">
+              <h2>개설 강좌 목록</h2>
+              <div class="navMainBoundary" style="margin-bottom: 30px"></div>
+              <form
+                class="teacherLectureListContent"
+                method="post"
+                id="lectureForm"
+              >
+                <input type="hidden" name="lectureCode" value="강의 코드 값" />
+                <input type="hidden" name="lectureTitle" value="강의 제목" />
+                <input type="hidden" name="teacherName" value="권순구" />
+                <div>
+                  <img
+                    src="https://high.milkt.co.kr/UploadFile/LecturerImg/2_%EA%B6%8C%EC%88%9C%EA%B5%AC_Img10_0.png"
+                    alt=""
+                    class="teacherCircleImg"
+                  />
+                  <div class="textCenter"><span>국어</span> 권순구</div>
+                </div>
+                <div class="teacherLectureArea">
+                  <div class="di">
+                    <div>
+                      <div id="lectureCode">강의 코드</div>
+                      <div>
+                        <span class="best">BEST</span>
+                        <a href="#"
+                          ><span class="lectureTitleBold">강의 제목</span></a
+                        >
+                      </div>
+                      <div><a href="#">강의 수강평</a></div>
+                    </div>
+                  </div>
+                  <div>
+                    <button
+                      class="lecturePayBtn"
+                      type="button"
+                      onclick="submitForm('/lecture/user/insertCart.do')"
+                    >
+                      장바구니
+                    </button>
+                    <button
+                      class="lecturePayBtn"
+                      type="button"
+                      onclick="submitForm('/payments/user/payments.do')"
+                    >
+                      구매하기
+                    </button>
+                    <div class="lecturePayValue">
+                      <input type="checkbox" /><span>금액</span>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <form
+                class="teacherLectureListContent"
+                method="post"
+                id="lectureForm"
+              >
+                <input type="hidden" name="lectureCode" value="강의 코드 값" />
+                <input type="hidden" name="lectureTitle" value="강의 제목" />
+                <input type="hidden" name="teacherName" value="권순구" />
+                <div>
+                  <img
+                    src="https://high.milkt.co.kr/UploadFile/LecturerImg/2_%EA%B6%8C%EC%88%9C%EA%B5%AC_Img10_0.png"
+                    alt=""
+                    class="teacherCircleImg"
+                  />
+                  <div class="textCenter"><span>국어</span> 권순구</div>
+                </div>
+                <div class="teacherLectureArea">
+                  <div class="di">
+                    <div>
+                      <div id="lectureCode">강의 코드</div>
+                      <div>
+                        <span class="best">BEST</span>
+                        <a href="#"
+                          ><span class="lectureTitleBold">강의 제목</span></a
+                        >
+                      </div>
+                      <div><a href="#">강의 수강평</a></div>
+                    </div>
+                  </div>
+                  <div>
+                    <button
+                      class="lecturePayBtn"
+                      type="button"
+                      onclick="submitForm('/lecture/user/insertCart.do')"
+                    >
+                      장바구니
+                    </button>
+                    <button
+                      class="lecturePayBtn"
+                      type="button"
+                      onclick="submitForm('/payments/user/payments.do')"
+                    >
+                      구매하기
+                    </button>
+                    <div class="lecturePayValue">
+                      <input type="checkbox" /><span>금액</span>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <form
+                class="teacherLectureListContent"
+                method="post"
+                id="lectureForm"
+              >
+                <input type="hidden" name="lectureCode" value="강의 코드 값" />
+                <input type="hidden" name="lectureTitle" value="강의 제목" />
+                <input type="hidden" name="teacherName" value="권순구" />
+                <div>
+                  <img
+                    src="https://high.milkt.co.kr/UploadFile/LecturerImg/2_%EA%B6%8C%EC%88%9C%EA%B5%AC_Img10_0.png"
+                    alt=""
+                    class="teacherCircleImg"
+                  />
+                  <div class="textCenter"><span>국어</span> 권순구</div>
+                </div>
+                <div class="teacherLectureArea">
+                  <div class="di">
+                    <div>
+                      <div id="lectureCode">강의 코드</div>
+                      <div>
+                        <span class="best">BEST</span>
+                        <a href="#"
+                          ><span class="lectureTitleBold">강의 제목</span></a
+                        >
+                      </div>
+                      <div><a href="#">강의 수강평</a></div>
+                    </div>
+                  </div>
+                  <div>
+                    <button
+                      class="lecturePayBtn"
+                      type="button"
+                      onclick="submitForm('/lecture/user/insertCart.do')"
+                    >
+                      장바구니
+                    </button>
+                    <button
+                      class="lecturePayBtn"
+                      type="button"
+                      onclick="submitForm('/payments/user/payments.do')"
+                    >
+                      구매하기
+                    </button>
+                    <div class="lecturePayValue">
+                      <input type="checkbox" /><span>금액</span>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- 메인 콘텐츠 영역 // -->
+
+      <!-- // 푸터 영역 -->
+      <footer class="footerContainer">
+        <div class="footerContent">
+          <img src="/public/logo.png" alt="로고" id="footerLogo" />
+          <div>
+            <p class="footerLink">
+              <a href="#" style="padding-left: 0px">회사소개</a> |
+              <a href="#">이용약관</a> | <a href="#">개인정보처리방침</a> |
+              <a href="#">스마트해법수학 학습관</a>
+            </p>
+            <p>
+              (주)스마트 해법 대표자 : 한덕용, 조수진, 강경민 사업자등록번호 :
+              119-81-78787 부가통신사업 신고 번호 : 016590
+            </p>
+            <p>
+              통신판매신고서 : 제2016-서울금천-1306호 주소 : 서울 금천구
+              가산로9길 23 11층 (가산동) 대표번호 : 010-8904-4623
+            </p>
+            <p style="color: rgb(153, 153, 153)">
+              Copyright © CHUNJAETEXTBOOK Corp. All Rights Reserved
+            </p>
+          </div>
+          <img src="/public/footerRight.png" alt="가맹문의" />
+        </div>
+      </footer>
+    </div>
+    <!-- 푸터 영역 // -->
+
+    <script src="/script.js"></script>
+    <script src="/jsGroup/teacher/teacherDetail.js"></script>
+  </body>
+</html>

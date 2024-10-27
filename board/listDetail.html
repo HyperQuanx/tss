@@ -12,6 +12,7 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="icon" href="/public/channels4_profile.jpg" type="image/png" />
+    <link rel="stylesheet" href="/styleGroup/post/list.css" />
     <!-- link 태그 // -->
   </head>
   <body>
@@ -162,17 +163,125 @@
 
       <!-- // 메인 콘텐츠 영역 -->
       <main>
-        <h1 class="textCenter" style="margin-bottom: 30px">사이드 바</h1>
-        <div class="sidebar">
-          <ul>
-            <li><a href="#">버튼1</a></li>
-            <li><a href="#">버튼2</a></li>
-            <li><a href="#">버튼3</a></li>
-            <li><a href="#">버튼4</a></li>
-          </ul>
+        <div class="mainArea">
+          <div class="boardDetailContainer">
+            <div class="boardDetailContent">
+              <div class="boardDetailUp">
+                <div class="moveList"><a href="#">게시판 이름 ></a></div>
+                <div class="boardDetailTitle">제목 영역</div>
+                <div
+                  class="boardDetailUserInfo"
+                  style="justify-content: space-between"
+                >
+                  <div class="boardDetailUserInfo">
+                    <img
+                      src="/public/myprofile.png"
+                      alt=""
+                      class="boardProfileImg"
+                    />
+                    <div class="boardDetailUserInfoCon">
+                      <span class="boardNick">닉네임</span>
+                      <div>
+                        <span class="boardRegdate">regDate</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div style="margin-right: 30px">
+                    <img src="/public/comment.png" class="boardCommentImg" />
+                    <span style="font-weight: bold">댓글 (2)</span>
+                    <span style="position: relative">
+                      <img
+                        src="/public/menuBar.png"
+                        alt=""
+                        class="menuQ"
+                        onclick="toggleBottomBar()"
+                      />
+                      <div class="bottomBar" id="bottomBar">
+                        <div><a href="#">수정</a></div>
+                        <div
+                          class="navMainBoundary"
+                          style="margin: 10px 0 10px 0"
+                        ></div>
+                        <div>
+                          <a href="#" onclick="confirmDelete()">삭제</a>
+                        </div>
+                      </div>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="navMainBoundary"></div>
+              <div class="boardMainContent">
+                컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역
+                컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역
+                컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역
+                컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역
+                컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역
+                컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역
+                컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역 컨텐츠 영역
+                컨텐츠 영역 컨텐츠 영역
+              </div>
+              <div class="navMainBoundary"></div>
+              <div class="boardDetailDown">
+                <div style="margin-bottom: 30px">
+                  <img src="/public/comment.png" class="boardCommentImg" />
+                  <span style="font-weight: bold">댓글 (2)</span>
+                </div>
+                <div>
+                  <div style="margin: 10px 0 10px 0">
+                    <div class="commentUserArea">
+                      <img
+                        src="/public/myprofile.png"
+                        alt=""
+                        class="commentProfile"
+                      />
+                      <div style="margin-left: 5px">댓글 닉네임1</div>
+                    </div>
+                    <div>댓글 내용0</div>
+                    <div class="boardRegdate">regDate</div>
+                  </div>
+                  <div class="navMainBoundary"></div>
+                </div>
+                <div>
+                  <div style="margin: 10px 0 10px 0">
+                    <div class="commentUserArea">
+                      <img
+                        src="/public/myprofile.png"
+                        alt=""
+                        class="commentProfile"
+                      />
+                      <div style="margin-left: 5px">댓글 닉네임2</div>
+                    </div>
+                    <div>댓글 내용0</div>
+                    <div class="boardRegdate">regDate</div>
+                  </div>
+                  <div class="navMainBoundary"></div>
+                </div>
+                <div class="commentWrite">
+                  <form
+                    action="#"
+                    method="post"
+                    onsubmit="return validateComment()"
+                  >
+                    <div class="commentMyNickName" id="userNickname">
+                      내 닉네임
+                    </div>
+                    <textarea
+                      id="commentContent"
+                      name="commentContent"
+                      placeholder="댓글을 남겨보세요."
+                      oninput="updateCharCount()"
+                    ></textarea>
+                    <div class="formActions">
+                      <button class="submitBtn" type="submit">등록</button>
+                      <span id="charCount" class="charCount">0/1000</span>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <button class="toggleButton">메뉴</button>
-        <div class="hiddenToggleBottom"></div>
       </main>
       <!-- 메인 콘텐츠 영역 // -->
 
@@ -205,5 +314,6 @@
     <!-- 푸터 영역 // -->
 
     <script src="/script.js"></script>
+    <script src="/jsGroup/post/listDetail.js"></script>
   </body>
 </html>

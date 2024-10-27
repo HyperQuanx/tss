@@ -11,6 +11,11 @@ body {
   text-align: center;
 }
 
+.hoverAction:hover {
+  color: #666;
+  cursor: pointer;
+}
+
 .upBarGroup {
   display: flex;
   width: 100%;
@@ -46,6 +51,12 @@ body {
 
 .dDay {
   margin: 0 10px 0 10px;
+}
+
+.mainBox {
+  width: 1500px;
+  background-color: white;
+  min-height: 800px;
 }
 
 .navMainBoundary {
@@ -257,6 +268,10 @@ li {
 a {
   text-decoration: none;
   color: black;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .logoImg {
@@ -595,3 +610,96 @@ a {
 }
 
 /* 로그인 스타일 끝 */
+
+/* 사이드 바 시작 */
+
+.sidebar {
+  position: fixed;
+  bottom: 76px;
+  left: 50px;
+  width: 60px;
+  height: 250px;
+  background-color: #008cd6;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease, background-color 0.3s ease, opacity 0.5s ease;
+  opacity: 0;
+  overflow: hidden; /* 이미지가 영역에 맞게 */
+}
+
+.sidebar.visible {
+  transform: translateY(0);
+  background-color: #008cd6;
+  opacity: 1;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar ul li {
+  margin: 10px 0;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.sidebar ul li a:hover {
+  color: #ddd;
+}
+
+.toggleButton {
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+  width: 60px;
+  height: 60px;
+  background-color: #008cd6;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  overflow: hidden;
+  z-index: 30;
+}
+
+.toggleButton:hover {
+  background-color: #008acc;
+}
+
+.hiddenToggleBottom {
+  position: fixed;
+  bottom: 0px;
+  left: 44px;
+  width: 66px;
+  height: 80px;
+  overflow: hidden;
+  background-color: white;
+  z-index: 15;
+}
+
+/* 사이드 바 끝 */
+
+.plusBtnArea {
+  display: flex;
+  justify-content: space-between;
+}

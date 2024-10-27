@@ -86,3 +86,28 @@ function goToRegister() {
 }
 
 // 로그인 팝업 ---
+
+// 사이드 바 시작
+
+document.addEventListener("DOMContentLoaded", () => {
+  const sidebar = document.querySelector(".sidebar");
+  const toggleButton = document.querySelector(".toggleButton");
+
+  toggleButton.addEventListener("click", () => {
+    sidebar.classList.toggle("visible");
+  });
+});
+
+// 사이드 바 끝
+
+// 글자 자르기
+document.addEventListener("DOMContentLoaded", function () {
+  const userLinks = document.querySelectorAll(".user-info a");
+
+  userLinks.forEach((link) => {
+    const maxLength = 15;
+    if (link.textContent.length > maxLength) {
+      link.textContent = link.textContent.slice(0, maxLength) + "...";
+    }
+  });
+});
