@@ -1,76 +1,130 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib uri="jakarta.tags.core" prefix="c"%>
-<%@ page import="java.net.URLEncoder" %>
-<!DOCTYPE html>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+    <title>My Post and Comment List</title>
 </head>
 <body>
-<h3> 자유 게시글 상세보기 내가 쓴글 체크해서 지우는 버튼 </h3>
-<form id="postFrm" action="deletePost.do" method="POST">
-	<input type="hidden" name="idx" value="${boardDTO.boardIdx}"/>
-	<input type="hidden" name="type" value="${boardDTO.boardType}"/>
-	<h2>${boardDTO.boardTitle}</h2>
-	<p><strong>작성자:</strong> ${boardDTO.boardWriter}</p>
-	<p><strong>등록일:</strong> ${boardDTO.boardRegdate}</p>
-	<p><strong>내용:</strong></p>
-	<div>${boardDTO.boardContent}</div>
-<!-- 	<img src="/uploads/board/4bde963a-2510-4357-8d85-2b61161d4b2e_119850714.jpeg" /> -->
-	<button type="button" onclick="gotoModify()">수정</button>
-	<button onclick="gotoDelete()">삭제</button>
-</form>
-<h3>첨부 파일</h3>
-<c:if test="${!empty fileList}">
-    <c:set var="file" value="${fileList[0]}" />
-    <ul>
-        <li>
+<h1>내 게시글 목록</h1>
+
+<!-- 게시글 목록 -->
+<table border="1">
+    <tr>
+        <th>게시글 타입</th>
+        <th>게시글 제목</th>
+        <th>게시글 내용</th>
+        <th>작성일</th>
+    </tr>
+    <c:forEach var="post" items="${postList}">
+        <tr>
+            <td>${post.postType}</td>
+            <td>${post.postTitle}</td>
+            <td>${post.postContent}</td>
+            <td>${post.postRegdate}</td>
+        </tr>
+    </c:forEach>
+</table>
+
+<!-- 게시글 페이징 -->
+<div>
+    <c:if test="${postPagination.totalPages > 1}">
+        <c:if test="${postPagination.hasFirstPage()}">
+            <a href="?postPageNo=1&commentPageNo=${commentPagination.pageNo}"><< </a>
+        </c:if>
+        <c:if test="${postPagination.hasPreviousBlock()}">
+            <a href="?postPageNo=${postPagination.blockStartPage - 1}&commentPageNo=${commentPagination.pageNo}">< </a>
+        </c:if>
+
+        <c:forEach var="i" begin="${postPagination.blockStartPage}" end="${postPagination.blockEndPage}">
             <c:choose>
-                <c:when test="${file.fileName.endsWith('.jpg') || file.fileName.endsWith('.jpeg') || file.fileName.endsWith('.png') || file.fileName.endsWith('.gif')}">
-                    <img src="uploads/${file.filePath}" alt="${file.fileName}" width="200px" height="200px">
-                	 <a href="downloadFile.do?filePath=${file.filePath}&fileName=${file.fileName}">
-					    ${file.fileName}
-					</a>
+                <c:when test="${i == postPagination.pageNo}">
+                    <strong>${i}</strong> 
                 </c:when>
                 <c:otherwise>
-                    <a href="downloadFile.do?filePath=${file.filePath}&fileName=${file.fileName}">
-                        ${file.fileName}
-                    </a>
+                    <a href="?postPageNo=${i}&commentPageNo=${commentPagination.pageNo}">${i}</a>
                 </c:otherwise>
             </c:choose>
-        </li>
-    </ul>
-</c:if>
-<c:if test="${empty fileList}">
-    <p>첨부된 파일이 없습니다.</p>
-</c:if>
-<c:if test="${boardDTO.boardType != 'R' && boardDTO.boardType != 'N' && boardDTO.boardType != 'D' && boardDTO.boardType != 'C'}">
-	<c:if test="${not empty commentList}">
-		<h3>댓글 목록</h3>
-		<ul>
-		    <c:forEach var="comment" items="${commentList}">
-		        <li>${comment.commentContent} - <strong>${comment.userId}</strong> ${comment.commentRegdate}</li>
-		    </c:forEach>
-		</ul>
-	</c:if>
-	<form id="commentFrm" action="postCommentWrite.do" method="POST">
-	    <input type="hidden" name="boardIdx" value="${boardDTO.boardIdx}"/> 
-	    <textarea name="commentContent" rows="4" cols="50" placeholder="댓글을 입력하세요" required></textarea><br>
-	    <button type="submit">댓글작성</button>
-	</form>
-</c:if>
-</body>
+        </c:forEach>
 
-<script>
-function gotoModify() {
-    location.href = "gotoPostModify.do?idx=${boardDTO.boardIdx}"; 
-}
-function gotoDelete() {
-    if (confirm("정말 삭제하시겠습니까?")) { 
-    	document.getElementById("postFrm").submit();
-    }
-}
-</script>
+        <c:if test="${postPagination.hasNextBlock()}">
+            <a href="?postPageNo=${postPagination.blockEndPage + 1}&commentPageNo=${commentPagination.pageNo}"> ></a>
+        </c:if>
+        <c:if test="${postPagination.hasLastPage()}">
+            <a href="?postPageNo=${postPagination.totalPages}&commentPageNo=${commentPagination.pageNo}"> >></a>
+        </c:if>
+    </c:if>
+</div>
+
+<h1>내 댓글 목록</h1>
+
+<!-- 댓글 목록 -->
+<table border="1">
+    <tr>
+        <th>댓글 유형</th>
+        <th>원문글</th>
+        <th>내용</th>
+        <th>작성일</th>
+    </tr>
+   <c:forEach var="comment" items="${commentList}">
+        <tr>
+            <td>
+                <c:choose>
+                    <c:when test="${comment.boardComment != null}">${comment.board.boardType}</c:when>
+                    <c:when test="${comment.qnaComment != null}">${comment.qna.qnaType}</c:when>
+                </c:choose>
+            </td>
+             <td>
+                <c:choose>
+                    <c:when test="${comment.boardComment != null}"><a href="/gotoPostDetail.do?idx=${comment.board.boardIdx}">${comment.board.boardTitle}</a></c:when>
+                    <c:when test="${comment.qnaComment != null}"><a href="/gotoQnaDetail.do?idx=${comment.qna.qnaIdx}">${comment.qna.qnaTitle}</a></c:when>
+                </c:choose>
+            </td>
+            <td>
+                <c:choose>
+                    <c:when test="${comment.boardComment != null}">${comment.boardComment.commentContent}</c:when>
+                    <c:when test="${comment.qnaComment != null}">${comment.qnaComment.qnaCommentContent}</c:when>
+                </c:choose>
+            </td>
+            <td>
+                <c:choose>
+                    <c:when test="${comment.boardComment != null}">${comment.boardComment.commentRegdate}</c:when>
+                    <c:when test="${comment.qnaComment != null}">${comment.qnaComment.commentRegdate}</c:when>
+                </c:choose>
+            </td>
+        </tr>
+    </c:forEach>
+</table>
+
+<!-- 댓글 페이징 -->
+<div>
+    <c:if test="${commentPagination.totalPages > 1}">
+        <c:if test="${commentPagination.hasFirstPage()}">
+            <a href="?commentPageNo=1&postPageNo=${postPagination.pageNo}"><<</a>
+        </c:if>
+        <c:if test="${commentPagination.hasPreviousBlock()}">
+            <a href="?commentPageNo=${commentPagination.blockStartPage - 1}&postPageNo=${postPagination.pageNo}">< </a>
+        </c:if>
+
+        <c:forEach var="i" begin="${commentPagination.blockStartPage}" end="${commentPagination.blockEndPage}">
+            <c:choose>
+                <c:when test="${i == commentPagination.pageNo}">
+                    <strong>${i}</strong> 
+                </c:when>
+                <c:otherwise>
+                    <a href="?commentPageNo=${i}&postPageNo=${postPagination.pageNo}">${i}</a>
+                </c:otherwise>
+            </c:choose>
+        </c:forEach>
+
+        <c:if test="${commentPagination.hasNextBlock()}">
+            <a href="?commentPageNo=${commentPagination.blockEndPage + 1}&postPageNo=${postPagination.pageNo}"> ></a>
+        </c:if>
+        <c:if test="${commentPagination.hasLastPage()}">
+            <a href="?commentPageNo=${commentPagination.totalPages}&postPageNo=${postPagination.pageNo}"> >></a>
+        </c:if>
+    </c:if>
+</div>
+
+</body>
 </html>

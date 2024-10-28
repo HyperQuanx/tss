@@ -68,7 +68,8 @@
 }
 
 .totalPrice {
-  text-align: right;
+  display: flex;
+  justify-content: space-between;
   font-size: 16px;
   margin-bottom: 20px;
 }
@@ -108,4 +109,3 @@
 .paymentSuccessMessageArea {
   margin-left: 20px;
 }
-
